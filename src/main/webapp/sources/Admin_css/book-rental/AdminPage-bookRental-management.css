@@ -1,0 +1,336 @@
+@font-face {
+    font-family: 'NanumGothic';
+    src: url('./font/NanumGothic.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div {
+    --border: 1px solid black;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("/sources/image/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: over;
+}
+
+.body {
+    display: flex;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: #1487FA;
+}
+
+.header_rigth_logo {
+    width: 20%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+.header_menu {
+    width: 55%;
+    height: 100%;
+}
+
+.header_user {
+    width: 25%;
+    height: 100%;
+}
+
+#user_info {
+    display: flex;
+    text-indent: 5em;
+    line-height: 3.7em;
+}
+
+#user_info > li {
+    list-style: none;
+    color: white;
+    font-family: 'NanumGothic', sans-serif;    
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#menu_list > li, a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-family: 'NanumGothic', sans-serif;    
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#menu_list {
+    display: flex;
+    text-align: start;
+    text-indent: 5em;
+    line-height: 3.7em;
+}
+/* 메인 */
+.main {
+    width: 100%;
+    min-height: 700px;
+    text-align: center;
+    justify-items: center;
+    margin-top: 5em;
+    flex: 1;
+}
+
+.main > h2 {
+    font-size: 35px;
+    color: #ffffff;
+}
+/* 검색창 */
+.searchbar {
+  width: 40%;
+  height: 130px;
+  background-color: rgba(245, 245, 245, 0.4);
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar > form {
+  width: 80%;
+}
+
+.searchbar > input[type="text"] {
+  width: 60%;
+  height: 3em;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#searchBtn {
+    height: 3em;
+    padding: 0 15px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1487FA;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* 테이블 */
+table {
+    border-collapse: collapse;
+    border: none;
+    margin: 0 auto; 
+    margin-bottom: 5%;
+    width: 60%;
+}
+
+th, td {
+    border: none;
+    padding: 15px;
+    text-align: center;
+}
+
+thead {
+    background-color: #1487FA;
+    color: white;
+}
+
+tbody {
+    background-color: white;
+}
+
+/* 테이블-버튼 */
+.table-controls {
+    width: 60%;
+    text-align: right;
+    margin: 20px auto 10px auto;
+}
+
+.table-controls .btn {
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    margin-top: 4em;
+}
+
+.table-controls > .btn.search {
+    background-color: #1487FA;
+    margin-left: 20px;
+    font-weight: 500;
+    height: 40px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#bookReturnBtn {
+    background-color: #ff3300;
+    width: 50px;
+    height: 30px;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#modifyBtn {
+    background-color: #f5f5f5;
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    color: darkgray;
+    cursor: pointer;
+}
+
+/* 푸터 */
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #515859
+}
+.footer-top {
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    height: 30%;
+    align-content: center;
+    font-size: 0.6em;
+}
+.footer-top > ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.footer-bottom {
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    line-height: 3em;
+}
+
+.footer-bottom > ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+
+}
+
+a > button {
+    width: 50px;
+    height: 15px;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+/* 책 대출여부 */
+#book_status_N {
+    width: 100%;
+    height: 40px;
+    background-color: #ff3300;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#book_status_Y {
+    width: 100%;
+    height: 40px;
+    background-color: #1487FA;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* hover 이벤트 */
+input[type=text]:focus {
+    border: 2px solid #1487FA;
+    outline: none;
+}
+
+#searchBtn:hover {
+    background-color: #005B88;
+    outline: none;
+}
+
+#bookReturnBtn:hover {
+    background-color: #b91900;
+    outline: none;
+}
+
+.btn.search:hover {
+    background-color: #005B88;
+    outline: none;
+}
+
+/* 상하 버튼 */
+#scrollToTopBtn {
+    position: fixed;       
+    bottom: 100px;           
+    right: 30px;        
+    width: 50px;
+    height: 50px;
+    background-color: #1487FA; 
+    color: white;           
+    border: none;
+    border-radius: 50%;     
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);       
+    transition: all 0.3s ease;
+    z-index: 999;           
+  }
+
+  #scrollToBottomBtn {
+    position: fixed;       
+    bottom: 30px;           
+    right: 30px;            
+    width: 50px;
+    height: 50px;
+    background-color: #1487FA; 
+   	color: white;           
+    border: none;
+    border-radius: 50%;     
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);        
+    transition: all 0.3s ease;
+    z-index: 999;           
+  }
+
+
+   #scrollToTopBtn:hover {
+    background-color: #005b88;
+    transform: scale(1.2);
+  }
+  
+  #scrollToBottomBtn:hover {
+    background-color: #005b88;
+    transform: scale(1.2);
+  }

@@ -1,0 +1,263 @@
+    @font-face {
+    font-family: 'NanumGothic';
+    src: url('./font/NanumGothic.ttf') format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("/sources/image/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: over;
+}
+
+.body {
+    display: flex;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: #005B88;
+}
+
+.header_rigth_logo {
+    width: 20%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+.header_menu {
+    width: 55%;
+    height: 100%;
+}
+
+.header_user {
+    width: 25%;
+    height: 100%;
+}
+
+#user_info {
+    display: flex;
+    text-indent: 5em;
+    line-height: 3.7em;
+}
+
+#user_info > li {
+    list-style: none;
+    color: white;
+    font-family: 'NanumGothic', sans-serif;    
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#menu_list > li, a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-family: 'NanumGothic', sans-serif;    
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#menu_list {
+    display: flex;
+    text-align: start;
+    text-indent: 5em;
+    line-height: 3.7em;
+}
+
+    /* 메인 */
+.main {
+    width: 100%;
+    min-height: 100%;
+    text-align: center;
+    justify-items: center;
+    margin-top: 5em;
+    margin-bottom: 6em;
+    flex: 1;
+}
+/* 유저 추가 div */
+.user-add-div {
+    width: 30%;
+    height: 400px;
+    border: 1px solid black;
+    margin-top: 2em;
+    margin-bottom: 80px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d5d5d5;
+    background-color: white;
+    padding: 30px;
+}
+
+.user-add-div h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+input[type=text] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    padding: 10px;
+}
+/* 유저 추가 아이디/나이-div */
+/* 푸터 */
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #515859;
+}
+.footer-top {
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    height: 30%;
+    align-content: center;
+    font-size: 0.6em;
+}
+.footer-top > ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.footer-bottom {
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    line-height: 3em;
+}
+
+.warning-text {
+    color:#ff3300;
+    font-weight: 700;
+    font-size: 14px;
+    --margin: 20px 0;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 40px;
+    color: #ffff;
+    background-color:#005B88;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}
+.login-btn {
+	width: 100%;
+    height: 40px;
+    color: #ffff;
+    background-color:#ff3300;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top:20px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-bottom > ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+a > button {
+    width: 50px;
+    height: 15px;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+/* hover 이벤트 */
+input[type=text]:focus  {
+    border: 2px solid  #005B88;
+    outline: none;
+}
+
+input[type=submit]:hover {
+    background-color: #005B88;
+    outline: none;
+}
+
+/* 푸터 */
+#footer{
+    width: 100%;
+    height: 150px;
+    display: flex;    
+}
+.footerInner{
+    width: 100%;
+    height: 100px;
+}
+.footLinks{
+    margin-left: 2%;
+    width: 90%;
+    height: 30px;
+    box-shadow: 0px 1px 1px rgba(213,213,213,0.8);
+}
+.link{
+    width: 250px;
+    color: rgba(213,213,213,0.8);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 15px;
+    list-style: none;
+    padding-left: 0;  
+}
+#firstLink{
+    margin-left: 10%;
+}
+#firstLink2{
+    margin-left: 80%;
+}
+#secondLink{
+    margin-left: 110px;
+}
+.footInfo{
+    width: 60%;
+    height: 20px;
+    margin-left:  20%;
+    color: rgba(213,213,213,0.8);
+    font-size: 14px;
+}
+.footInfoSpan{
+    margin: 5px;
+}
+.footToggles{
+    width: 40%;
+    margin-left: 15%;
+    margin-top: 10px;
+    color: rgba(213,213,213,0.8);
+}
+.toggleDot{
+    margin-left: 100px;
+}

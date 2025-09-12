@@ -1,0 +1,221 @@
+/* =========================
+   개인정보수정.css (modify.jsp)
+   ========================= */
+
+/* Base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  background: #f4f5f6;
+  color: #1f1f1f;
+}
+a { color: inherit; text-decoration: none; }
+img { display: inline-block; vertical-align: middle; }
+button { font: inherit; }
+
+/* Layout root */
+#container { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* ===== Header (청록 바) ===== */
+#headWidthControl { width: 100%; background: #005B88; }
+#header {
+  height: 100px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex; align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+/* “오른쪽 몰기 + 중앙 넘지 않기” */
+#logo {
+  flex: 0 0 50%;              /* 왼쪽 50% 고정 → 오른쪽은 우측 절반 안에만 */
+  display: flex; align-items: center;
+}
+#logo img { height: 60px; }
+
+/* 오른쪽 클러스터 */
+#wellcome { margin-left: auto; font-size: 18px; }
+.headerNavi, #headerMenu {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; padding: 0 8px; color: #fff; background: transparent; border: none; cursor: pointer;
+}
+.headerNavi a { color: #fff; }
+#headerMenu img { width: 40px; height: 40px; }
+
+/* ===== Main wrapper ===== */
+#mainWidthControl {
+  width: 100%; max-width: 1280px; margin: 0 auto;
+  padding: 16px;
+  background: #f4f5f6;
+}
+
+/* ===== 상단: “나의 책장” 배너 + 검색 ===== */
+#myPageAndSearch {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 16px;
+  align-items: center;
+  margin: 10px 0 12px;
+  height: 150px;
+}
+#myPage {
+  width: 100%; height: 100%;
+  background: #B888CA;    
+  color: #fff;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; font-weight: 700;
+}
+#bookImg { margin-right: 12px; }
+
+#searchPlace1 { height: 100%; display: flex; align-items: center; }
+.searchContainer {
+  width: 100%; height: 80px;
+  background: rgba(213,213,213,0.5);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.innerSearchContainer {
+  width: min(860px, 92%);
+  height: 48px;
+  background: #fff;
+  border-radius: 24px;
+  display: flex; align-items: center;
+  padding: 0 8px 0 12px;
+  gap: 8px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+}
+.select {
+  height: 32px; min-width: 140px;
+  border: none; outline: none; background: #f3f4f6;
+  border-radius: 6px; padding: 0 8px; font-size: 14px;
+}
+.searchinput {
+  flex: 1 1 auto; height: 100%;
+  border: none; outline: none; padding: 0 10px; font-size: 15px;
+}
+.searchBtn {
+  width: 48px; height: 40px;
+  border: none; background: transparent; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+
+/* ===== 상단 네비 4개 ===== */
+#Navi { margin-top: 6px; }
+#mainNavi { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; height: 70px; }
+.mainNavis {
+  border: 1px solid #e7e7e7; border-radius: 10px; background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600; color: #333;
+}
+
+/* ===== 메인 2열: 왼쪽 메뉴 / 오른쪽 폼 ===== */
+#main { display: grid; grid-template-columns: 260px 1fr; gap: 18px; margin-top: 12px; }
+
+/* 왼쪽 메뉴 */
+#mainLeft {
+  background: #eeeeee; border-radius: 8px; padding: 8px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.mainMenus {
+  height: 110px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  background: #f7f7f7;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 600; color: #4a4a4a;
+}
+#selected { background: #B888CA; color: #fff; border-color: transparent; }
+
+/* 오른쪽 영역 */
+#mainRight { display: flex; flex-direction: column; gap: 16px; }
+#mainHeader { display: flex; align-items: center; justify-content: center; }
+#pageName {
+  width: 92%;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px; background: #fff;
+  padding: 18px 22px;
+}
+#nameText { margin: 0; font-size: 22px; }
+
+/* ===== 공통 카드 ===== */
+#mainContent {
+  width: 92%; margin: 0 auto;
+  background: #fff; border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px; overflow: hidden;
+}
+
+/* ===== 1단계: 비밀번호 확인 폼 ===== */
+#putPassWord {
+  padding: 22px;
+  display: grid; grid-template-columns: 1fr 2fr; gap: 12px; align-items: center;
+}
+#putPassWord label { font-weight: 700; font-size: 16px; }
+#putPassWord input[type="password"] {
+  height: 44px; border-radius: 10px; border: 1px solid #d9dde3;
+  padding: 0 12px; font-size: 15px;
+}
+
+/* ===== 2단계: 정보 수정 폼 ===== */
+#inputHead {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 8px; font-weight: 700;
+  padding: 12px 16px; background: #f8f9fb; border-bottom: 1px solid #eef0f3;
+}
+#inputArea {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 8px; padding: 12px 16px 18px;
+}
+#inputArea .inputs input[type="text"],
+#inputArea .inputs input[type="number"] {
+  width: 100%; height: 42px; border-radius: 10px; border: 1px solid #d9dde3;
+  padding: 0 12px; font-size: 15px; outline: none;
+}
+#gender { display: flex; align-items: center; gap: 14px; }
+#gender input[type="radio"] { accent-color: #6b62b6; }
+
+/* ===== 버튼 영역 ===== */
+#shiftPageAndBtnPlace {
+  width: 100%; display: flex; align-items: center; justify-content: center;
+  padding: 18px 0 8px;
+}
+#submitBtn {
+  min-width: 120px; height: 40px;
+  border-radius: 10px; border: 1px solid #cfd3d8;
+  background: #eef1f5; color: #374151; font-weight: 700;
+  cursor: pointer;
+}
+#submitBtn:hover { filter: brightness(0.98); }
+
+/* ===== Footer ===== */
+#footerWidthControl { width: 100%; background: #515859; color:#ddd; margin-top: auto; }
+#footer { max-width:1280px; margin:0 auto; padding: 14px 16px; }
+.footerInner { display: flex; flex-direction: column; gap: 10px; }
+.footLinks { display: flex; gap: 16px; list-style: none; padding: 0; margin: 0; }
+.footLinks .link { color: #eaeaea; font-size: 14px; }
+.footInfo { display: flex; flex-wrap: wrap; gap: 12px; }
+.footInfoSpan { font-size: 13px; color: #e7e7e7; }
+.footToggles { display: flex; gap: 12px; font-size: 12px; color:#cfd2d6; }
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  #myPageAndSearch { grid-template-columns: 200px 1fr; }
+  #main { grid-template-columns: 220px 1fr; }
+}
+@media (max-width: 768px) {
+  #logo { flex: 0 0 auto; }  /* 중앙 제한 해제 (겹침 방지), 우측 정렬은 유지 */
+  #myPageAndSearch { grid-template-columns: 1fr; height: auto; }
+  #myPage { height: 72px; font-size: 20px; }
+  .innerSearchContainer { width: 96%; }
+  #main { grid-template-columns: 1fr; }
+  #mainLeft { order: 2; }
+  #mainRight { order: 1; }
+  #pageName, #mainContent { width: 100%; }
+  #putPassWord { grid-template-columns: 1fr; row-gap: 8px; }
+  #inputHead, #inputArea { grid-template-columns: 1fr; }
+}
