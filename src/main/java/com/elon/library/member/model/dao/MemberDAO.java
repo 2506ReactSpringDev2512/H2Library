@@ -26,9 +26,7 @@ public class MemberDAO {
 		rset = pstmt.executeQuery();
 		while(rset.next()) {
 			KHmember = MemberList(rset);
-			System.out.println("가동확인 while ");
 		}
-		System.out.print("디버깅 DAO "+ KHmember);
 		rset.close();
 		pstmt.close();
 		conn.close();
@@ -118,7 +116,6 @@ public class MemberDAO {
 		String active = rset.getString("MEMBER_ACTIVE");
 		
 		Member member = new Member(memberId, memberPw, memberName, phone, gender, age, admin, active);
-		System.out.println("디버깅 memeber 생성"+ member);
 		return member;
 	}
 	

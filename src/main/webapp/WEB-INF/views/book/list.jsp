@@ -129,7 +129,7 @@
 	                            	<c:when test="${book.lend_YN eq 'Y' or book.lend_YN eq '대여가능' }">
 	                            		<form action="${ctx}/rent/rent " method="post" class="rent">
 	                            			<input type="hidden" name="bookNo" value="${book.book_No }">
-	                            			<input type="hidden" name="memberId" value="${sessionScope.member_Id }">
+	                            			<input type="hidden" name="memberId" value="${sessionScope.memberId }">
 	                            			<button type="submit" class="rentBtn">도서 대여하기</button>
 	                            		</form>
 	                         		</c:when>

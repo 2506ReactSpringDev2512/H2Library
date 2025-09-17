@@ -14,7 +14,7 @@ import com.elon.library.member.model.vo.Member;
 /**
  * Servlet implementation class UserSignUpPage
  */
-@WebServlet("/khlibary/member/signup")
+@WebServlet("/member/signup")
 public class SignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

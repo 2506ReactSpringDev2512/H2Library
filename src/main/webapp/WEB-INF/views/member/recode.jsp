@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
@@ -144,22 +145,32 @@
                                </tbody>
                            </table>
                         </div>
-                        <div id="shiftPageAndBtnPlace">
-                            <div class="pagination">
-                                <button class="pageBtn" aria-label="이전">&lt;</button>
-                                <button class="pageBtn">1</button>
-                                <button class="pageBtn">2</button>
-                                <button class="pageBtn">3</button>
-                                <button class="pageBtn">4</button>
-                                <button class="pageBtn">5</button>
-                                <button class="pageBtn">6</button>
-                                <button class="pageBtn">7</button>
-                                <button class="pageBtn">8</button>
-                                <button class="pageBtn">9</button>
-                                <button class="pageBtn">10</button>
-                                <button class="pageBtn" aria-label="다음">&gt;</button>
-                            </div>
-                        </div>
+						<div id="shiftPageAndBtnPlace">
+						  <div class="pagination">
+						
+						    <c:if test="${page > 1}">
+						      <a class="pageBtn"
+						         href="${ctx}/member/recode?page=${page - 1}&type=${type}&searchKey=${fn:escapeXml(searchKey)}">&lt;</a>
+						    </c:if>
+						
+						    <c:forEach var="i" begin="1" end="${totalPages}">
+						      <c:choose>
+						        <c:when test="${i == page}">
+						          <span class="pageBtn" style="font-weight:700;">${i}</span>
+						        </c:when>
+						        <c:otherwise>
+						          <a class="pageBtn"
+						             href="${ctx}/member/recode?page=${i}&type=${type}&searchKey=${fn:escapeXml(searchKey)}">${i}</a>
+						        </c:otherwise>
+						      </c:choose>
+						    </c:forEach>
+						
+						    <c:if test="${page < totalPages}">
+						      <a class="pageBtn"
+						         href="${ctx}/member/recode?page=${page + 1}&type=${type}&searchKey=${fn:escapeXml(searchKey)}">&gt;</a>
+						    </c:if>
+						
+						  </div>
                     </div>
                 </div>
             </div>

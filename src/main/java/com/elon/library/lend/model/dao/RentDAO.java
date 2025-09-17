@@ -136,6 +136,8 @@ public class RentDAO {
 		result += pstmt.executeUpdate();
 		pstmt.close();
 			
+		System.out.println(bookNo);
+		System.out.println(memberId);
 //		대여 테이블 변경
 		String aQuery = "INSERT INTO LENDINFO_TBL VALUES(?,?,DEFAULT,DEFAULT,DEFAULT)";
 		pstmt = conn.prepareStatement(aQuery);
@@ -147,8 +149,41 @@ public class RentDAO {
 		conn.close();
 		return result;
 	}
-
-	public List<Rent> getMemberRentList(String memberId, String type, String searchKey, int pageNo, Connection conn) throws SQLException {
+//	총 행의 갯수
+	public int count(String memberId, String type, String searchKey,int pageNo, Connection conn)throws SQLException{
+		String col = null;
+		String curr = "";
+		if(pageNo == 1) {
+			curr = "";
+		}else {
+			curr = "AND RETURN_YN = 'N' ";
+		}
+		switch(type) {
+		case "bookName": col = "AND BOOK_NAME LIKE "; break;
+		case "author": col = "AND BOOK_AUTHOR LIKE "; break;
+		case "publisher": col = "AND BOOK_PUBLISHER LIKE "; break;
+		case "" : col = "AND 1 > " ; break;
+		default : col= "AND PUBLISHER LIKE ";
+		}
+		String query ="SELECT COUNT(*) "
+				+ "FROM LENDINFO_TBL L "
+				+ "JOIN BOOK_TBL B ON B.BOOK_NO = L.BOOK_NO "
+				+ "WHERE L.M_ID = ? "+col+" ? "+ curr ;
+		try(PreparedStatement pstmt = conn.prepareStatement(query)){
+			pstmt.setString(1, memberId);
+			if(col.equals("AND 1 > ")) {
+				pstmt.setInt(2, 0);	
+			}else {
+				pstmt.setString(2,"%" + searchKey + "%");	
+			}
+			try(ResultSet rset = pstmt.executeQuery()){
+		rset.next();
+		return rset.getInt(1);
+		}
+		}
+	}
+	
+	public List<Rent> getMemberRentList(String memberId, String type, String searchKey,int page, int size,int pageNo, Connection conn) throws SQLException {
 //		추후 스위치문으로 where절을 손 볼 예정 
 //		검색창을 이용한 경우 검색 조건 필터링 더하기 위함
 		ResultSet rset = null;
@@ -172,18 +207,22 @@ public class RentDAO {
 				+ "FROM LENDINFO_TBL L "
 				+ "JOIN BOOK_TBL B ON B.BOOK_NO = L.BOOK_NO "
 				+ "WHERE L.M_ID = ? "+col+" ? "+ curr
-				+ " ORDER BY L.LEND_DATE DESC ";
+				+ " ORDER BY L.LEND_DATE DESC "
+				+ "OFFSET ? ROW FETCH NEXT ? ROWS ONLY";
+		int offset = (Math.max(page, 1)-1) * Math.max(size, 1);
 		pstmt = conn.prepareStatement(query);
 		pstmt.setString(1, memberId);
+//		검색조건이 따로 없는 경우 항상 참이되어 모두 출력도되록
 		if(col.equals("AND 1 > ")) {
 			pstmt.setInt(2, 0);	
 		}else {
 			pstmt.setString(2,"%" + searchKey + "%");	
 		}
+		pstmt.setInt(3, offset);
+		pstmt.setInt(4, size);
 		rset = pstmt.executeQuery();
 		while(rset.next()) {
 			rList.add(cRent(rset));
-			System.out.println(rList);
 		}
 		rset.close();
 		pstmt.close();

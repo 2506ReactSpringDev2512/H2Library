@@ -16,6 +16,7 @@ import com.elon.library.lend.model.vo.Rent;
 public class RentService {
 	private TeamH2Template h2Template;
 	private final RentDAO rDAO = new RentDAO();
+	public static final int PAGE_SIZE = 10;
 	
     public RentService() {
         this.h2Template = TeamH2Template.getInstance();
@@ -34,12 +35,13 @@ public class RentService {
 		return result;
 	}
 
-
-	public List<Rent> getRentList(String memberId, String type, String searchKey, int pageNo) {
+//	 유저들의 대여 리스트 
+	
+	public List<Rent> getRentList(String memberId, String type, String searchKey, int page,int pageNo) {
 		List<Rent>rList = null;
 		try {
 			Connection conn = h2Template.getConnection();
-			rList = rDAO.getMemberRentList(memberId,type,searchKey,pageNo,conn);
+			rList = rDAO.getMemberRentList(memberId,type,searchKey,page,PAGE_SIZE,pageNo,conn);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -116,5 +118,15 @@ public class RentService {
 		}
 		
 		return result;
+	}
+
+
+	public int count(String memberId,String type, String searchKey, int pageNo) {
+		try(
+				Connection conn = h2Template.getConnection()){
+				return rDAO.count(memberId,type, searchKey, pageNo, conn);
+			}catch(SQLException e) {
+				throw new RuntimeException(e);
+			}
 	}
 }

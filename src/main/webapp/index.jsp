@@ -22,7 +22,7 @@
         <div class="headerNavi" id="wellcome">환영합니다 ${sessionScope.memberName} 님.</div>
         <div class="headerNavi"><a href="${ctx}/khlibary/logout">로그아웃</a></div>
         <div class="headerNavi"><a href="${ctx}/member/recode">나의책장</a></div>
-        <div id="headerMenu"><img src="${ctx}/sources/image/icon_menu_50px.png" alt=""></div>
+        <div id="headerMenu"><a href="${ctx}/notice/list"><img src="${ctx}/sources/image/icon_menu_50px.png" alt=""></a></div>
       </div>
     </div>
   </c:when>
@@ -41,12 +41,12 @@
           </a>
         </div>
         <div class="headerNavi">
-          <a href="${ctx}/khlibary/member/signup">
+          <a href="${ctx}/member/signup">
             <img src="${ctx}/sources/image/icon_person_add_40px.png" alt="">회원가입
           </a>
         </div>
         <div id="headerMenu">
-          <a href="${ctx}/book/list"><img src="${ctx}/sources/image/icon_menu_50px.png" alt=""></a>
+          <div id="headerMenu"><a href="${ctx}/notice/list"><img src="${ctx}/sources/image/icon_menu_50px.png" alt=""></a></div>
         </div>
       </div>
     </div>
