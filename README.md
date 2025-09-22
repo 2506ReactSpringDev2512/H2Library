@@ -58,22 +58,26 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 <h3>구현된화면</h3> 
+<img width="3200" height="1800" alt="Frame 59" src="https://github.com/user-attachments/assets/3abbc47e-e3fc-4c6b-be8a-370ca3247f2b" />
+<img width="3200" height="1800" alt="Frame 60" src="https://github.com/user-attachments/assets/ddc9d672-0fd2-44c7-a987-309c883a3f0e" />
+<img width="3200" height="1800" alt="Frame 61" src="https://github.com/user-attachments/assets/58119df8-0bb3-4a0d-9bb4-7dc1f584411e" />
+<img width="3200" height="1800" alt="Frame 62" src="https://github.com/user-attachments/assets/ae9b96b4-4512-4290-8fc6-868eff9cfbb2" />
+<img width="3200" height="1800" alt="Frame 64" src="https://github.com/user-attachments/assets/9aa509c4-1696-4e79-9f8d-a5f1ba712dd5" />
+<img width="3200" height="1800" alt="Frame 65" src="https://github.com/user-attachments/assets/56a7d2c6-3769-457b-9a6b-e457e3c1f578" />
+<img width="3200" height="1800" alt="Frame 66" src="https://github.com/user-attachments/assets/f48d77f4-e5ec-4843-8239-9f6e1d79c0c8" />
+<img width="3200" height="1800" alt="Frame 67" src="https://github.com/user-attachments/assets/e1e5fc05-2bd6-4e0e-847c-8761a40d6758" />
+<img width="3200" height="1800" alt="Frame 68" src="https://github.com/user-attachments/assets/c282c03b-d8f8-497a-9e96-48638fc9aa92" />
+<img width="3200" height="1800" alt="Frame 77" src="https://github.com/user-attachments/assets/fe3c27cb-47c0-4533-a8ca-94cb0090920e" />
+<img width="3200" height="1800" alt="Frame 69" src="https://github.com/user-attachments/assets/4c11faf6-355b-4b2b-8794-4133114fba44" />
+<img width="3200" height="1800" alt="Frame 70" src="https://github.com/user-attachments/assets/3ad155e5-a081-4527-ba71-54c8d787f939" />
+<img width="3200" height="1800" alt="Frame 71" src="https://github.com/user-attachments/assets/23327247-ea2c-44dc-9730-35f214c5b50b" />
+<img width="3200" height="1800" alt="Frame 72" src="https://github.com/user-attachments/assets/5720587f-fbd5-419b-8313-0f0f9b378b67" />
+<img width="3200" height="1800" alt="Frame 73" src="https://github.com/user-attachments/assets/4ca2eb3b-fb9d-49dd-afa5-378c6161fece" />
+<img width="3200" height="1800" alt="Frame 74" src="https://github.com/user-attachments/assets/0d59ffc4-296b-439a-8e6d-f96af0619950" />
+<img width="3200" height="1800" alt="Frame 75" src="https://github.com/user-attachments/assets/da1038fb-5c80-41e8-be45-d64ea7fa32f6" />
+<img width="3200" height="1800" alt="Frame 76" src="https://github.com/user-attachments/assets/0ba9e02e-826a-433f-b184-f52364bcf92f" />
+<img width="3200" height="1800" alt="Frame 78" src="https://github.com/user-attachments/assets/3a5d1757-1563-4a8e-bd59-7701b8f36283" />
 
-<img width="809" height="618" alt="image" src="https://github.com/user-attachments/assets/27beea88-8b2e-4864-a269-0f9b58fe9e52" />
-<img width="816" height="613" alt="image" src="https://github.com/user-attachments/assets/4491da9f-6ca6-4641-82b4-40c3470d098c" />
-<img width="819" height="611" alt="image" src="https://github.com/user-attachments/assets/81db7e5f-be97-4265-9696-1a99690ea756" />
-<img width="894" height="559" alt="image" src="https://github.com/user-attachments/assets/552ad810-a6c6-4ecb-b319-fb50686e2165" />
-<img width="896" height="558" alt="image" src="https://github.com/user-attachments/assets/9ba181b6-8c29-49f9-a2f8-6b73ab67a549" />
-<img width="809" height="618" alt="image" src="https://github.com/user-attachments/assets/4ddc73fd-6ed2-47dc-95d5-d46f12075afd" />
-<img width="814" height="614" alt="image" src="https://github.com/user-attachments/assets/a7ee9b54-d9b4-461c-a5f7-99e32169e45d" />
-<img width="857" height="583" alt="image" src="https://github.com/user-attachments/assets/cee7f8a3-3b10-4786-98f2-638b4cd4dffa" />
-<img width="822" height="608" alt="image" src="https://github.com/user-attachments/assets/9fb91d39-ada4-4beb-b47c-79229f97ef67" />
-<img width="809" height="618" alt="image" src="https://github.com/user-attachments/assets/0921e66d-e846-4461-a124-9ee5e2b4c519" />
-<img width="857" height="583" alt="image" src="https://github.com/user-attachments/assets/4c7c68b4-554f-4388-a776-f989fa93daf1" />
-<img width="819" height="610" alt="image" src="https://github.com/user-attachments/assets/75b4df85-8cf4-43aa-a71b-1e8ae9f2509d" />
-<img width="834" height="599" alt="image" src="https://github.com/user-attachments/assets/6b815a63-7571-4ccd-913c-cb585ef7f963" />
-<img width="823" height="608" alt="image" src="https://github.com/user-attachments/assets/069b473f-4767-4b6f-9136-6c7657333dc7" />
-<img width="828" height="604" alt="image" src="https://github.com/user-attachments/assets/dc1308d6-5c5b-4bd0-b4fb-34d95a85d887" />
 
 ---------------------------------------------------------------------------------------------------------------------
 <h3>향후 개선해보고싶은 점</h3> 
@@ -82,6 +86,8 @@
 2. 미구현 기능 추가(공지사항 테이블 관련)
 3. 반납 연기 등의 기능을 추가
 4. 일부 DAO의 메서드의 경우 비슷한 기능이 다수 존재하는걸 완화
+5. 더 나은 기능을 구현할 아이디어가 있음에도 그러지 못한 점
+6. 페이징 처리 부분은 ai의 도움을 크게 받았는데, 다음에는 ai의 도움 없이 스스로 구현해보고싶습니다
 
 ---------------------------------------------------------------------------------------------------------------------
 <h3>마무리 & 느낀점</h3>
